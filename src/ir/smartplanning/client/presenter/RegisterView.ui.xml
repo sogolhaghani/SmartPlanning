@@ -1,0 +1,57 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+	xmlns:g='urn:import:com.google.gwt.user.client.ui' ui:generateFormat='com.google.gwt.i18n.rebind.format.PropertiesFormat'
+	ui:generateKeys='com.google.gwt.i18n.rebind.keygen.MD5KeyGenerator'
+	ui:generateLocales='default'>
+
+	<g:HTMLPanel>
+
+		<div class="row height_complete">
+			<div class="col-md-8 height_complete">
+				<h1>این سایت فعلا برای دانش آموزان سال چهارم رشته ریاضی قابلیت ارائه
+					برنامه هوشمند را دارد. و در غیر این صورت برنامه ها به صورت پیش فرض
+					به دانش آموز ارائه می شود.</h1>
+			</div>
+			<div class="col-md-4 height_complete">
+				<div class="front container-fluid">
+					<div class="form-group">
+						<label>نام </label>
+						<g:TextBox ui:field="name" styleName="form-control"></g:TextBox>
+					</div>
+
+					<div class="form-group">
+						<label>نام خانوادگی</label>
+						<g:TextBox ui:field="family" styleName="form-control"></g:TextBox>
+					</div>
+
+					<div class="form-group">
+						<label>نام کاربری</label>
+						<g:TextBox ui:field="userName" styleName="form-control"></g:TextBox>
+					</div>
+
+					<div class="form-group">
+						<label>رمز عبور</label>
+						<g:PasswordTextBox ui:field="password"
+							styleName="form-control"></g:PasswordTextBox>
+					</div>
+
+					<div class="form-group">
+						<label>سال پایه</label>
+						<g:ListBox ui:field="grade" styleName="form-control"></g:ListBox>
+					</div>
+
+					<div class="form-group">
+						<label>رشته تحصیلی</label>
+						<g:ListBox ui:field="major" styleName="form-control"></g:ListBox>
+					</div>
+					<div class="form-group">
+						<g:RadioButton ui:name="sex" ui:field="girl">دختر</g:RadioButton>
+						<g:RadioButton ui:name="sex" ui:field="boy">پسر</g:RadioButton>
+					</div>
+					<g:Button ui:field="register" styleName="btn btn-primary float_left">ثبت نام</g:Button>
+				</div>
+			</div>
+		</div>
+	</g:HTMLPanel>
+</ui:UiBinder>

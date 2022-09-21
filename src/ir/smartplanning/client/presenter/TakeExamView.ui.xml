@@ -1,0 +1,123 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+	xmlns:g='urn:import:com.google.gwt.user.client.ui' xmlns:local='urn:import:ir.smartplanning.client.widget'
+	ui:generateFormat='com.google.gwt.i18n.rebind.format.PropertiesFormat'
+	ui:generateKeys='com.google.gwt.i18n.rebind.keygen.MD5KeyGenerator'
+	ui:generateLocales='default'>
+
+	<ui:style>
+		.body {
+		background-color: white;
+		float: left;
+		direction: rtl;
+		width: 916px;
+		}
+
+		.body_table {
+		background: rgb(102, 102, 102);
+		direction:
+		rtl;
+		width: 100%;
+		display:inline-table;
+		}
+
+		.image_panel {
+		text-align:
+		center;
+		}
+
+		.main_page {
+		margin: auto;
+		width: 960px;
+		}
+		.start_message {
+		color:
+		rgb(255, 102, 0);
+		font-family: yekan;
+		font-size: large;
+		margin-top: 20px;
+		}
+
+		.start_timer {
+		color: black;
+		font-family: Orbitron;
+		font-size: x-large;
+		}
+
+		.cell {
+		color: rgb(102, 102, 102);
+		display: inline-block;
+		font-family:
+		Nazanin;
+		font-size: x-large;
+		font-weight: 200;
+		text-align: center;
+		}
+
+		.cell_orange {
+		color: rgb(255, 102, 0);
+		display: inline-block;
+		font-family: Nazanin;
+		font-size: xx-large;
+		font-weight: 200;
+		}
+		.width{
+		min-width: 42px;
+		}
+
+		.margin_top {
+		margin-top: 120px;
+		}
+		.align_left{
+		text-align:right;
+		}
+
+		@font-face {
+		font-family: 'Orbitron';
+		font-style: normal;
+		font-weight:
+		400;
+		src: local('Orbitron-Light'), local('Orbitron-Regular'),
+		url(client_resources/fonts/Orbitron.woff) format('woff');
+		}
+	</ui:style>
+
+	<g:HTMLPanel styleName="{style.body_table} complete_height">
+		<g:HTMLPanel styleName="{style.main_page}  complete_height">
+
+			<g:HTMLPanel styleName="{style.body}  complete_height"
+				ui:field="body">
+				<g:HTMLPanel ui:field="detailWrapper"
+					styleName="{style.image_panel}  complete_height">
+					<g:Image url="client_resources/images/logo-vector1.svg"
+						styleName="{style.margin_top}"></g:Image>
+					<g:HTMLPanel>
+						<g:HTMLPanel>
+							<g:Label styleName="{style.cell}">گروه آموزشی </g:Label>
+							<g:Label styleName="{style.cell_orange}" ui:field="major"></g:Label>
+						</g:HTMLPanel>
+						<g:Label styleName="{style.cell}" ui:field="examType"></g:Label>
+					</g:HTMLPanel>
+					<g:HTMLPanel ui:field="details">
+					</g:HTMLPanel>
+					<g:Label ui:field="startMessage" styleName="{style.start_message}">
+						<!-- <ui:text from="آزمون تا چند ثانیه دیگر شروع می شود" /> -->
+					</g:Label>
+					<g:Label ui:field="startTimer" styleName="{style.start_timer}" />
+				</g:HTMLPanel>
+				<g:HTMLPanel ui:field="examBookletInfo">
+				</g:HTMLPanel>
+				<g:HTMLPanel width="916px">
+					<g:Button ui:field="getOrGiveBooklet" styleName="text_button">
+						<!-- <ui:text from="تحویل دفترچه"></ui:text> -->
+					</g:Button>
+					<g:Label ui:field="examTimer" styleName="{style.align_left}"></g:Label>
+				</g:HTMLPanel>
+				<local:QuestionCellList ui:field="questionCellList" />
+				<g:HTMLPanel ui:field="examStaticInfo"></g:HTMLPanel>
+			</g:HTMLPanel>
+			<g:HTMLPanel ui:field="navigator" styleName="float_left {style.width}"></g:HTMLPanel>
+		</g:HTMLPanel>
+	</g:HTMLPanel>
+</ui:UiBinder>
